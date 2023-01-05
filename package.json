@@ -1,0 +1,22 @@
+{
+  "name": "namaste_react_live",
+  "version": "1.0.0",
+  "description": "This is a live course",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cornensue/Namaste_React_Live.git"
+  },
+  "author": "Cornelio Nsue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cornensue/Namaste_React_Live/issues"
+  },
+  "homepage": "https://github.com/cornensue/Namaste_React_Live#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
+}
