@@ -1,4 +1,4 @@
-Markdown_Guide.pdf
+*.pdf
 node_modules/
 *.txt
 .parcel-cache/
