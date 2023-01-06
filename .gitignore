@@ -1,3 +1,5 @@
 Markdown_Guide.pdf
 node_modules/
 *.txt
+.parcel-cache/
+dist/

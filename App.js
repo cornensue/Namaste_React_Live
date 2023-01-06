@@ -1,9 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 const heading2 = React.createElement(
 	"h2", 
 	{
 		id: 'title',
 	},
-	"Heading 2 inside React.createElement"
+	"Heading 2 from Parcel"
 );
 
 const heading1 = React.createElement(
@@ -11,7 +14,7 @@ const heading1 = React.createElement(
 	{
 		id: 'title1',
 	},
-	"Heading 1 inside React.createElement"
+	"Heading 1 from Parcel"
 );
 
 const container = React.createElement(

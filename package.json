@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/cornensue/Namaste_React_Live#readme",
   "devDependencies": {
-    "parcel": "^2.8.2"
-  }
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
 }
