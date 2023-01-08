@@ -22,9 +22,9 @@
 
 4. ### `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent><TitleComponent/>}` in JSX.
 	- {TitleComponent}: renders a react element. 
-	- {<TitleComponent/>}: renders a react function component. 
-	- {<TitleComponent><TitleComponent/>}: it's a function components and inside we can have another componets. For example: 
-		{<TitleComponent>
+	- `{<TitleComponent/>}`: renders a react function component. 
+	- `{<TitleComponent><TitleComponent/>}`: it's a function components and inside we can have another componets. For example: 
+		`{<TitleComponent>
 			<Header />
 			<HeroSection />
-		<TitleComponent/>}
+		<TitleComponent/>}`
