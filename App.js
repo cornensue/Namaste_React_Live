@@ -1,19 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM, {createRoot} from 'react-dom/client';
 
-// React element
-const heading = (
+const Title = () => (
 	<h1 id='title2' key="h2">
 		Namaste JSX
 	</h1>
 );
 
-// React Component
-// -> Functional - NEW
+// Composing Components
 const HeaderComponent = () => {
 	return (
 		<div>
-			{heading}
+		<Title />
 			<h2>Namaste React Functional Component</h2>
 			<h3>This is a h2 tag</h3>
 		</div>
