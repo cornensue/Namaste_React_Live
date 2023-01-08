@@ -10,7 +10,7 @@ const Title = () => (
 const HeaderComponent = () => {
 	return (
 		<div>
-		<Title />
+		{<Title />}
 			<h2>Namaste React Functional Component</h2>
 			<h3>This is a h2 tag</h3>
 		</div>
@@ -21,4 +21,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // passing a react element inside root
 // async defer
-root.render(HeaderComponent());
+root.render(<HeaderComponent />);
