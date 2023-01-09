@@ -1,4 +1,24 @@
-#container{
-	background-color: darkcyan;
-	color: gainsboro;
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.logo {
+	width: 70px;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: .5rem;
+	border: 1 solid burlywood;
+	border-radius: .4rem;
+}
+
+.nav-items > ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.nav-items > ul > li {
+	padding: .5rem;
 }
