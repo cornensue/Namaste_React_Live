@@ -6,29 +6,39 @@
 .logo {
    width: 100px;
 }
+
 .header {
    display: flex;
    justify-content: space-between;
    margin: 0 0.2rem;
-   border: 1 solid burlywood;
-   border-radius: 0.4rem;
 }
 
 .nav-items > ul {
    list-style-type: none;
    display: flex;
+   margin-top: 2rem;
 }
 
 .nav-items > ul > li {
-   padding: 0.5rem;
+   padding: 1rem;
 }
 
 .card {
-   margin: 1rem;
    width: 250px;
-   padding: 1rem;
+   padding: 0.5rem;
 }
 
 .image-card {
    width: 100%;
+   border-radius: .5rem;
+}
+
+.restaurant-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.restaurant-list > * {
+   margin: 0.5rem;
 }
