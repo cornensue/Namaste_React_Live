@@ -42,3 +42,13 @@
 .restaurant-list > * {
    margin: 0.5rem;
 }
+
+.footer {
+   color:aliceblue;
+   margin-top: 2rem;
+   padding: 1rem;
+   background-color: cadetblue;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: .2rem;
+}
