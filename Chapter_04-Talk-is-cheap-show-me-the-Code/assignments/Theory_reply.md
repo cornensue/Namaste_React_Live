@@ -4,12 +4,15 @@
 2. ### Is ES6 mandatory for React?
 	No, we can still use the old JS concepts inside react. 
 3. ### How can I write comments in JSX?
-	By using { // one line comment 
-				/* multi 
+	In JSX, we can write comments inside braces, like this: 
+	`{ // one line comment }`
+
+		`{
+			/* multi
 				line 
 				comments
-				*/	
-			}
+			*/	
+		}` 
 4. ### What is <React.Fragment></React.Fragment> and <></>?
 	- `<React.Fragment></React.Fragment>` is a syntax, to group multiple elements together. 
 	- You can use it to put multiple elements in any place where a single element can go.
@@ -26,7 +29,11 @@
 		. 	Pause work and come back to it later.
 		. 	Split work into chunks and prioritize tasks
 		. 	Reuse previously completed work.
-		.	Abort work if it’s no longer needed.
+		.	Abort work if it’s no longer needed
+	8. ### Why we need keys in React? When do we need keys in React?
+		- We need the keys so that react knows exactly which component needs to be rerendered, and it is important that the keys to be unique.
+		- Keys are needed when we have a list of elements or components, which have to be rendered at the same time, using a map loop, for example. 
+		So, when you are going to render each element or component has a unique key.
 
 
 
