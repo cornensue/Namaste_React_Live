@@ -1,49 +1,7 @@
-import ReactDOM, { createRoot } from "react-dom/client";
-import logo from "./img/logo.png";
-/*
-	Header
-		- Logo (Title)
-		- Nav Items( Right side)
-		Car
-	Body
-		- Search bar
-		- Restaurant list
-			- RestaurantCard (mnay cards)
-				- Image
-				- Name
-				- Rating
-				- Cusines
-	Footer
-		- Links
-*/
-const Title = () => (
-   <a href="/">
-      <img
-         className="logo"
-         alt="our logo"
-         src={logo}
-      />
-   </a>
-);
+export const IMG_CON_URL =
+   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-// Composing Components
-const Header = () => {
-   return (
-      <div className="header">
-         <Title />
-         <nav className="nav-items">
-            <ul>
-               <li>Home</li>
-               <li>About</li>
-               <li>Contact</li>
-               <li>Cart</li>
-            </ul>
-         </nav>
-      </div>
-   );
-};
-
-const restaurantList = [
+export const restaurantList = [
    {
       type: "restaurant",
       data: {
@@ -1527,51 +1485,3 @@ const restaurantList = [
       },
    },
 ];
-
-const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating }) => {
-   return (
-      <div className="card">
-         <img
-            className="image-card"
-            alt="restaurant card"
-            src={
-               "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-               cloudinaryImageId
-            }
-         />
-         <h2>{name}</h2>
-         <h3>{cuisines.join(", ")}</h3>
-         <h4>{avgRating} stars</h4>
-      </div>
-   );
-};
-
-const Body = () => {
-   return (
-      <div className="restaurant-list">
-         {restaurantList.map((restaurant) => {
-            return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>;
-         })}
-      </div>
-   );
-};
-
-const Footer = () => {
-   return <h3 className="footer">Footer</h3>;
-};
-
-const AppLayout = () => {
-   return (
-      <>
-         <Header />
-         <Body />
-         <Footer />
-      </>
-   );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// passing a react element inside root
-// async defer
-root.render(<AppLayout />);

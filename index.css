@@ -1,13 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap");
+
 * {
    margin: 0;
    box-sizing: border-box;
+}
+
+body {
+   font-family: "Karla", sans-serif;
+   font-size: 16px;
 }
 
 .logo {
    width: 120px;
    border-radius: 1.5rem;
    margin-top: 0.5rem;
-   margin-left: 4rem; 
+   margin-left: 4rem;
 }
 
 .header {
@@ -16,6 +23,7 @@
    background-color: cadetblue;
    color: aliceblue;
    text-transform: uppercase;
+   font-weight: 800;
 }
 
 .nav-items > ul {
@@ -36,7 +44,41 @@
 
 .image-card {
    width: 100%;
-   border-radius: .5rem;
+   border-radius: 0.5rem;
+}
+
+.search-form {
+   display: flex;
+   justify-content: center;
+}
+
+.search-form > * {
+   margin: 0.3rem;
+}
+.search-input {
+   padding: 1rem;
+   border: 1px solid cadetblue;
+   border-radius: 0.6rem;
+   font-family: inherit;
+   font-weight: 600;
+}
+
+.search-btn {
+   border: none;
+   padding: 1rem 2rem;
+   color: aliceblue;
+   background-color: cadetblue;
+   border-radius: 0.6rem;
+   cursor: pointer;
+   font-family: inherit;
+   font-weight: 600;
+   letter-spacing: 2px;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+   background-color: #b16455;
+   color: aliceblue;
 }
 
 .restaurant-list {
@@ -50,11 +92,11 @@
 }
 
 .footer {
-   color:aliceblue;
+   color: aliceblue;
    margin-top: 2rem;
    padding: 1rem;
    background-color: cadetblue;
    text-align: center;
    text-transform: uppercase;
-   letter-spacing: .2rem;
+   letter-spacing: 0.2rem;
 }
