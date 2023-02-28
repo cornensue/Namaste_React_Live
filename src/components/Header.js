@@ -1,4 +1,5 @@
 import logo from "../../img/logo.png";
+import { useState } from "react";
 
 const Title = () => (
    <a href="/">
@@ -7,6 +8,8 @@ const Title = () => (
 );
 
 const Header = () => {
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
    return (
       <div className="header">
          <Title />
@@ -18,6 +21,13 @@ const Header = () => {
                <li>Cart</li>
             </ul>
          </nav>
+         <section>
+            {isLoggedIn ? (
+               <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+            ) : (
+               <button onClick={() => setIsLoggedIn(true)}>Login</button>
+            )}
+         </section>
       </div>
    );
 };

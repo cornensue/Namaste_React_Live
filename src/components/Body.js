@@ -1,22 +1,50 @@
 import RestaurantCard from "./RestaurantCard";
-import { restaurantList } from "../constants";
-import { useState } from "react";
+import Shimmer from "./Shimmer";
+import { useState, useEffect } from "react";
 
 // filter data funt
 function filterData(searchText, restaurants) {
-   const filterResult = restaurants.filter((restaurant) =>
-      restaurant.data.name.includes(searchText)
+   const filterDa = restaurants.filter((restaurant) =>
+      restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
    );
-   return filterResult;
+   return filterDa;
 }
 
 const Body = () => {
-   const [restaurants, setRestaurants] = useState(restaurantList);
+   const [allRestaurants, setAllRestaurants] = useState([]);
+   const [filteredrestaurants, setFilteredrestaurants] = useState([]);
    const [searchText, setSearchText] = useState("");
 
-   return (
+   useEffect(() => {
+      // API call
+      getRestaurants();
+   }, []);
+
+   async function getRestaurants() {
+      const data = await fetch(
+         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      console.log(json.data.cards[2].data.data.cards);
+      // Optional Chaining
+      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+   }
+
+   // Conditional Rendering
+   // if my restaurant is empty => Shimmer UI
+   // if my restaurant has data => actual data UI
+
+   // not render component (Early return)
+   if (!allRestaurants) return null;
+   if (filteredrestaurants?.length === 0)
+      return <h1>No Restaurant match your filter!!</h1>;
+
+   return allRestaurants?.length === 0 ? (
+      <Shimmer />
+   ) : (
       <>
-         <form className="search-form">
+         <div className="search-form">
             <p>
                <input
                   type="search"
@@ -32,17 +60,17 @@ const Body = () => {
                   className="search-btn"
                   onClick={() => {
                      // we need filter the data here
-                     const data = filterData(searchText, restaurants);
+                     const data = filterData(searchText, allRestaurants);
                      // update the state - restaurants
-                     setRestaurants(data);
+                     setFilteredrestaurants(data);
                   }}
                >
                   Search
                </button>
             </p>
-         </form>
+         </div>
          <div className="restaurant-list">
-            {restaurants.map((restaurant) => {
+            {filteredrestaurants.map((restaurant) => {
                return (
                   <RestaurantCard
                      {...restaurant.data}

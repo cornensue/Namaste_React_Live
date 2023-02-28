@@ -4,43 +4,42 @@ import { useState } from "react";
 
 // filter data funt
 function filterData(searchText, restaurants) {
-   const filterResult = restaurants.filter((restaurant) =>
+   const filterData = restaurants.filter((restaurant) =>
       restaurant.data.name.includes(searchText)
    );
-   return filterResult;
+   return filterData;
 }
 
 const Body = () => {
    const [restaurants, setRestaurants] = useState(restaurantList);
    const [searchText, setSearchText] = useState("");
+   console.log(restaurants);
 
    return (
       <>
-         <form className="search-form">
-            <p>
-               <input
-                  type="search"
-                  className="search-input"
-                  placeholder="Search"
-                  size="50"
-                  value={searchText}
-                  onChange={(e) => setSearchText(e.target.value)}
-               />
-            </p>
-            <p>
-               <button
-                  className="search-btn"
-                  onClick={() => {
-                     // we need filter the data here
-                     const data = filterData(searchText, restaurants);
-                     // update the state - restaurants
-                     setRestaurants(data);
-                  }}
-               >
-                  Search
-               </button>
-            </p>
-         </form>
+         <div className="search-form">
+            <input
+               type="search"
+               className="search-input"
+               placeholder="Search"
+               size="50"
+               value={searchText}
+               onChange={(e) => {
+                  setSearchText(e.target.value);
+               }}
+            />
+            <button
+               className="search-btn"
+               onClick={() => {
+                  // we need filter the data here
+                  const data = filterData(searchText, restaurants);
+                  // update the state - restaurants
+                  setRestaurants(data);
+               }}
+            >
+               Search
+            </button>
+         </div>
          <div className="restaurant-list">
             {restaurants.map((restaurant) => {
                return (
