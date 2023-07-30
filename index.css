@@ -91,6 +91,14 @@ body {
    margin: 0.5rem;
 }
 
+.shimmer-card {
+   width: 250px;
+   height: 250px;
+   padding: 0.5rem;
+   background-color: lightgray;
+   border-radius: 0.5rem;
+}
+
 .footer {
    color: aliceblue;
    margin-top: 2rem;
