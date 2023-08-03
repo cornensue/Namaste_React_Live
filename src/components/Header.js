@@ -12,7 +12,7 @@ const Header = () => {
    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
    return (
-      <div className="header">
+      <section className="header">
          <Title />
          <nav className="nav-items">
             <ul>
@@ -37,7 +37,7 @@ const Header = () => {
                <button onClick={() => setIsLoggedIn(true)}>Login</button>
             )}
          </section>
-      </div>
+      </section>
    );
 };
 

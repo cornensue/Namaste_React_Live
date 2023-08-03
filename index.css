@@ -26,11 +26,16 @@ body {
    font-weight: 800;
 }
 
+a {
+   text-decoration: none;
+}
+
 .nav-items > ul {
-   list-style-type: none;
+   list-style: none;
    display: flex;
    margin: 2rem 2rem;
    letter-spacing: 1px;
+   gap: 3rem;
 }
 
 .nav-items > ul > li {
