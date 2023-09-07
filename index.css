@@ -113,3 +113,14 @@ a {
    text-transform: uppercase;
    letter-spacing: 0.2rem;
 }
+
+.restaurante-detail {
+   margin-left: 1rem;
+}
+
+.restaurante-detail img {
+   margin: 0.5rem 0;
+   width: 25%;
+   border-radius: 0.5rem;
+   object-fit: contain;
+}
