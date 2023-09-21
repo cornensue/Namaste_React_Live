@@ -11,9 +11,8 @@ body {
 }
 
 .logo {
-   width: 120px;
-   border-radius: 1.5rem;
-   margin-top: 0.5rem;
+   width: 100px;
+   border-radius: 0.4rem;
    margin-left: 4rem;
 }
 
@@ -23,6 +22,7 @@ body {
    background-color: cadetblue;
    color: aliceblue;
    text-transform: uppercase;
+   width: 100%;
    font-weight: 800;
 }
 
@@ -62,18 +62,23 @@ a {
 }
 .search-input {
    padding: 1rem;
-   border: 1px solid cadetblue;
-   border-radius: 0.6rem;
+   border: 1px solid #b16455;
+   border-radius: 0.4rem;
    font-family: inherit;
    font-weight: 600;
+}
+
+.search-input:hover,
+.search-input:focus {
+   outline-color: cadetblue;
 }
 
 .search-btn {
    border: none;
    padding: 1rem 2rem;
    color: aliceblue;
-   background-color: cadetblue;
-   border-radius: 0.6rem;
+   background-color: #b16455;
+   border-radius: 0.4rem;
    cursor: pointer;
    font-family: inherit;
    font-weight: 600;
@@ -82,7 +87,7 @@ a {
 
 .search-btn:hover,
 .search-btn:focus {
-   background-color: #b16455;
+   background-color: cadetblue;
    color: aliceblue;
 }
 
@@ -106,12 +111,14 @@ a {
 
 .footer {
    color: aliceblue;
-   margin-top: 2rem;
    padding: 1rem;
    background-color: cadetblue;
    text-align: center;
    text-transform: uppercase;
    letter-spacing: 0.2rem;
+   width: 100%;
+   bottom: 0;
+   position: fixed;
 }
 
 .restaurante-detail {
@@ -121,6 +128,6 @@ a {
 .restaurante-detail img {
    margin: 0.5rem 0;
    width: 25%;
-   border-radius: 0.5rem;
+   border-radius: 0.2rem;
    object-fit: contain;
 }

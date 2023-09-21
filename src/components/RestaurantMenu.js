@@ -24,7 +24,6 @@ const RestaurantMenu = () => {
             <h1>Restaurant id: {params?.id} </h1>
             <h2>{restaurant.name}</h2>
             <img src={IMG_CON_URL + restaurant.cloudinaryImageId} />
-
             <h3>{restaurant.areaName}</h3>
             <h3>{restaurant.city}</h3>
             <h3>{restaurant.avgRating}</h3>
