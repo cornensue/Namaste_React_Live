@@ -45,7 +45,4 @@ const appRouter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// passing a react element inside root
-// async defer
 root.render(<RouterProvider router={appRouter} />);

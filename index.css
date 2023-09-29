@@ -20,7 +20,6 @@ body {
    display: flex;
    justify-content: space-between;
    background-color: cadetblue;
-   color: aliceblue;
    text-transform: uppercase;
    width: 100%;
    font-weight: 800;
@@ -28,6 +27,12 @@ body {
 
 a {
    text-decoration: none;
+   color: aliceblue;
+}
+
+a:hover {
+   color: #2c1b18;
+   text-decoration: underline;
 }
 
 .nav-items > ul {
@@ -62,7 +67,7 @@ a {
 }
 .search-input {
    padding: 1rem;
-   border: 1px solid #b16455;
+   border: 1px solid #2c1b18;
    border-radius: 0.4rem;
    font-family: inherit;
    font-weight: 600;
@@ -77,7 +82,7 @@ a {
    border: none;
    padding: 1rem 2rem;
    color: aliceblue;
-   background-color: #b16455;
+   background-color: #2c1b18;
    border-radius: 0.4rem;
    cursor: pointer;
    font-family: inherit;
@@ -95,6 +100,7 @@ a {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   background-color: rgb(86, 157, 160);
 }
 
 .restaurant-list > * {
@@ -111,11 +117,11 @@ a {
 
 .footer {
    color: aliceblue;
-   padding: 1rem;
-   background-color: cadetblue;
+   padding: 0.8rem;
+   background-color: #2c1b18;
    text-align: center;
    text-transform: uppercase;
-   letter-spacing: 0.2rem;
+   letter-spacing: 0.1rem;
    width: 100%;
    bottom: 0;
    position: fixed;
@@ -130,4 +136,10 @@ a {
    width: 25%;
    border-radius: 0.2rem;
    object-fit: contain;
+}
+
+.error-page {
+   background-color: aliceblue;
+   text-align: center;
+   padding: 1rem;
 }

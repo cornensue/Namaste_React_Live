@@ -12,17 +12,16 @@ const RestaurantMenu = () => {
 
    async function getRestaurantInfo() {
       const data = await fetch(
-         "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=176212"
+         "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=" +
+            params?.id
       );
       const json = await data.json();
       setRestaurant(json?.data?.cards[0]?.card?.card?.info);
-      console.log(json?.data?.cards[0]?.card?.card?.info);
    }
    return (
       <>
          <section className="restaurante-detail">
-            <h1>Restaurant id: {params?.id} </h1>
-            <h2>{restaurant.name}</h2>
+            <h1>{restaurant.name}</h1>
             <img src={IMG_CON_URL + restaurant.cloudinaryImageId} />
             <h3>{restaurant.areaName}</h3>
             <h3>{restaurant.city}</h3>
