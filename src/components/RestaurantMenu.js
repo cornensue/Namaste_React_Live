@@ -16,12 +16,12 @@ const RestaurantMenu = () => {
             params?.id
       );
       const json = await data.json();
-      setRestaurant(json?.data?.cards[0]?.card?.card?.info);
+      setRestaurant(json?.data?.cards[2]?.card?.card?.info);
+      console.log(json);
    }
    return (
       <>
          <section className="restaurante-detail">
-            <h1>{restaurant.name}</h1>
             <img src={IMG_CON_URL + restaurant.cloudinaryImageId} />
             <h3>{restaurant.areaName}</h3>
             <h3>{restaurant.city}</h3>
