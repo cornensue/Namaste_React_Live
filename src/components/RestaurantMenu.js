@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CON_URL } from "../constants";
+import useRestaurant from "../utils/useRestaurant";
 
 const RestaurantMenu = () => {
    const params = useParams();
-   const [restaurant, setRestaurant] = useState({});
+   const restaurant = useRestaurant(params);
 
-   useEffect(() => {
-      getRestaurantInfo();
-   }, []);
-
-   async function getRestaurantInfo() {
-      const data = await fetch(
-         "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=" +
-            params?.id
-      );
-      const json = await data.json();
-      setRestaurant(json?.data?.cards[2]?.card?.card?.info);
-      console.log(json);
-   }
    return (
       <>
          <section className="restaurante-detail">
