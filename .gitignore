@@ -3,5 +3,6 @@ node_modules/
 *.txt
 .parcel-cache/
 dist/
+namaste-react-notes.pdf/
 *.xopp
 .env
