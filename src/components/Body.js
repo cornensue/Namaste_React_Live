@@ -49,11 +49,11 @@ const Body = () => {
       <Shimmer />
    ) : (
       <>
-         <div className="search-form">
+         <div className="my-4 p-5 bg-fuchsia-200 flex gap-2">
             <p>
                <input
                   type="search"
-                  className="search-input"
+                  className="p-3"
                   placeholder="Search"
                   size="50"
                   value={searchText}
@@ -62,7 +62,7 @@ const Body = () => {
             </p>
             <p>
                <button
-                  className="search-btn"
+                  className="rounded p-3 bg-fuchsia-300"
                   onClick={() => {
                      // we need filter the data here
                      const data = filterData(searchText, allRestaurants);
@@ -74,10 +74,11 @@ const Body = () => {
                </button>
             </p>
          </div>
-         <div className="restaurant-list">
+         <div className="flex flex-wrap justify-center bg-fuchsia-100">
             {filteredrestaurants.map((restaurant) => {
                return (
                   <Link
+                     className="m-2"
                      to={"/restaurant/" + restaurant?.info.id}
                      key={restaurant?.info.id}
                   >
